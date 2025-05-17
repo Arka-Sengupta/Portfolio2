@@ -26,12 +26,12 @@ const Footer = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Arka
+            Arka Sengupta
           </motion.a>
           
           <div className="flex space-x-4">
             <motion.a
-              href="https://github.com/"
+              href="https://github.com/Arka-Sengupta"
               className="p-3 bg-primary/10 text-primary rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.9 }}
@@ -41,7 +41,7 @@ const Footer = () => {
               <FiGithub />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/arka-sengupta-02211b320/"
               className="p-3 bg-primary/10 text-primary rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.9 }}
@@ -50,7 +50,7 @@ const Footer = () => {
             >
               <FiLinkedin />
             </motion.a>
-            <motion.a
+            {/* <motion.a
               href="https://twitter.com/"
               className="p-3 bg-primary/10 text-primary rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
               whileHover={{ scale: 1.1, y: -5 }}
@@ -59,13 +59,13 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <FiTwitter />
-            </motion.a>
+            </motion.a> */}
           </div>
         </div>
         
         <div className="border-t border-light/10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-light/60 text-sm mb-4 md:mb-0">
-            © {currentYear} Arka. All rights reserved.
+            © {currentYear} Arka Sengupta. All rights reserved.
           </p>
           
           <div className="flex items-center">

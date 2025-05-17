@@ -31,7 +31,7 @@ const ContactSection = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: [0.6, 0.05, -0.01, 0.9],
+        ease: [0.6, 0.05, 0.01, 0.9],
       },
     },
   };
@@ -62,14 +62,14 @@ const ContactSection = () => {
     {
       icon: <FiMail className="text-primary-500 text-xl" />,
       title: 'Email',
-      value: 'arka.sengupta@example.com',
-      link: 'mailto:arka.sengupta@example.com',
+      value: 'arka.sengupta.06@gmail.com',
+      link: 'mailto:arka.sengupta.06@gmail.com',
     },
     {
       icon: <FiPhone className="text-primary-500 text-xl" />,
       title: 'Phone',
-      value: '+91 98765 43210',
-      link: 'tel:+919876543210',
+      value: '+91 7603058710',
+      link: 'tel:+917603058710',
     },
     {
       icon: <FiMapPin className="text-primary-500 text-xl" />,
@@ -80,9 +80,9 @@ const ContactSection = () => {
   ];
 
   const socialLinks = [
-    { icon: <FiGithub />, url: 'https://github.com/arkasengupta' },
-    { icon: <FiLinkedin />, url: 'https://linkedin.com/in/arkasengupta' },
-    { icon: <FiTwitter />, url: 'https://twitter.com/arkasengupta' },
+    { icon: <FiGithub />, url: 'https://github.com/Arka-Sengupta' },
+    { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/arka-sengupta-02211b320/' },
+    // { icon: <FiTwitter />, url: 'https://twitter.com/arkasengupta' },
   ];
 
   const inputClasses = "w-full bg-dark-800/50 border border-light/10 rounded-lg px-4 py-3 text-light placeholder:text-light/50 focus:outline-none focus:border-primary-500/50 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300";
@@ -139,7 +139,7 @@ const ContactSection = () => {
               variants={itemVariants}
               className="text-light/70 mb-8"
             >
-              I'm interested in freelance opportunities – especially ambitious or large projects.
+              I'm interested in freelance opportunities.
               However, if you have other requests or questions, don't hesitate to contact me using the form.
             </motion.p>
 
@@ -217,7 +217,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className={inputClasses}
-                    placeholder="John Doe"
+                    placeholder="Your name"
                   />
                 </div>
                 <div>
@@ -230,7 +230,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className={inputClasses}
-                    placeholder="john@example.com"
+                    placeholder="yourname@example.com"
                   />
                 </div>
               </div>
@@ -259,7 +259,7 @@ const ContactSection = () => {
                   required
                   rows={5}
                   className={inputClasses}
-                  placeholder="Hello, I'd like to talk about..."
+                  placeholder="write your message here....."
                 ></textarea>
               </div>
 

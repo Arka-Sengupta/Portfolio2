@@ -87,7 +87,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Arka
+          Arka Sengupta
         </motion.a>
 
         {/* Desktop Navigation */}

@@ -23,36 +23,32 @@ const EducationSection = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: [0.6, 0.05, -0.01, 0.9],
+        ease: [0.6, 0.05, 0.01, 0.9],
       },
     },
   };
 
   const educationData = [
     {
-      degree: 'Master of Technology in Computer Science',
-      institution: 'Indian Institute of Technology (IIT) Kharagpur',
-      location: 'Kharagpur, India',
-      period: '2018 - 2020',
-      description: 'Specialized in Artificial Intelligence and Machine Learning with a focus on computer vision and natural language processing. Completed thesis on "Deep Learning Approaches for Cross-Modal Information Retrieval".',
+      degree: `Bachelor's in technology`,
+      institution: 'Vellore Institute of Technology - AP',
+      location: 'Amaravati, India',
+      period: '2024 - 2028 (ONGOING)',
+      description: 'Studing the branch of Computer Science and Engineering, under School of Computer Science and Engineering(SCOPE).',
       achievements: [
-        'Graduated with 9.2 CGPA (Distinction)',
-        'Published research paper in International Conference on Machine Learning Applications',
-        'Received Merit-cum-Means Scholarship for academic excellence',
-        'Teaching Assistant for Advanced Algorithms and Data Structures courses',
+        'Graduated first semester with 8.5 SGPA',
+        'Participated in Google Dev Sprint Hackathon',
+        'Made various projects under the domains of Student Innovation, Digital financing and IoT.',
       ],
     },
     {
-      degree: 'Bachelor of Technology in Computer Science and Engineering',
-      institution: 'Jadavpur University',
+      degree: 'AISSCE',
+      institution: 'Kalyani Public School',
       location: 'Kolkata, India',
-      period: '2014 - 2018',
-      description: 'Comprehensive program covering software engineering, web development, database systems, and computer networks. Completed capstone project on "Real-time Collaborative Code Editor with Integrated Version Control".',
+      period: '2024 - 2022',
+      description: 'Studied from Science stream with the subjects of Physics, Chemistry, Maths and Biology.',
       achievements: [
-        'Graduated with First Class Honors (8.7 CGPA)',
-        'Winner of National Level Hackathon 2017 organized by Microsoft',
-        'Led the university web development team for 2 years',
-        'Recipient of the Outstanding Student Programmer Award',
+        'Graduated with overall 90% score'
       ],
     },
   ];
