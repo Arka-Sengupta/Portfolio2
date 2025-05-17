@@ -50,7 +50,7 @@ const ProjectsSection = () => {
     {
       title: 'Scoder',
       description: 'AI-guided collaborative coding platform',
-      image: '/src/assets/images/remove.png',
+      image: 'https://raw.githubusercontent.com/Arka-Sengupta/Portfolio2/refs/heads/main/src/assets/images/remove.png',
       technologies: ['Python', 'TensorFlow', 'React', 'FastAPI', 'WebGL','TypeScript'],
       category: 'ai',
       // github: 'https://github.com/arkasengupta/ai-vision-studio',
@@ -59,7 +59,7 @@ const ProjectsSection = () => {
     {
       title: 'Pixel Pulse',
       description: 'PixelPulse is a dual-application Java tool that lets users encode images into Robot 36 SSTV audio signals and decode those audio files back into images, using custom-built FFT and signal processing algorithms with a Swing-based GUI.',
-      image: '/src/assets/images/PixelPulse_logo.png',
+      image: 'https://raw.githubusercontent.com/Arka-Sengupta/Portfolio2/refs/heads/main/src/assets/images/PixelPulse_logo.png',
       technologies: ['java','java Swing'],
       category: 'desk',
       github: 'https://github.com/Arka-Sengupta/PixelPulse',
@@ -68,7 +68,7 @@ const ProjectsSection = () => {
     {
       title: 'Old Portfolio',
       description: 'A basic portfolio I made initially',
-      image: '/src/assets/images/porto.png',
+      image: 'https://raw.githubusercontent.com/Arka-Sengupta/Portfolio2/refs/heads/main/src/assets/images/porto.png',
       technologies: ['HTML','CSS','JavaScript','Bootstrap'],
       category: 'web',
       github: 'https://github.com/Arka-Sengupta/portfolio',
