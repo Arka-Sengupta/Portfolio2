@@ -38,17 +38,17 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: 'NexCommerce',
-      description: 'A modern e-commerce platform with advanced product filtering, real-time inventory management, secure payment processing, and an intuitive admin dashboard.',
-      image: '/project1.jpg',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Stripe', 'MongoDB', 'Redux'],
+      title: 'StockWise',
+      description: 'StockWise is a sleek, full-stack web application tailored for Indian stock market enthusiasts. It features live index tracking, AI-powered analysis, exchange comparisons, and a smart chatbot named Mr. Market, all wrapped in a modern, animated UI.',
+      image: 'https://raw.githubusercontent.com/Arka-Sengupta/StockWise/refs/heads/main/website/static/images/image2.png',
+      technologies: ['python','HTML','CSS','JavaScript'],
       category: 'web',
-      github: 'https://github.com/arkasengupta/nexcommerce',
-      liveDemo: 'https://nexcommerce-demo.vercel.app',
+      github: 'https://github.com/Arka-Sengupta/StockWise',
+      // liveDemo: 'https://nexcommerce-demo.vercel.app',
     },
     {
-      title: 'AI Vision Studio',
-      description: 'An AI-powered image generation and editing tool that uses deep learning to create and manipulate images based on text prompts with advanced style transfer capabilities.',
+      title: 'Scoder',
+      description: 'AI-guided collaborative coding platform',
       image: '/project2.jpg',
       technologies: ['Python', 'TensorFlow', 'React', 'FastAPI', 'WebGL', 'AWS'],
       category: 'ai',
@@ -252,7 +252,7 @@ const ProjectsSection = () => {
           variants={itemVariants}
           className="text-center mt-16"
         >
-          <motion.a
+          {/* <motion.a
             href="#"
             className="btn-accent inline-flex items-center gap-2 shadow-lg shadow-accent-500/10"
             whileHover={{ scale: 1.05, y: -3 }}
@@ -260,7 +260,7 @@ const ProjectsSection = () => {
           >
             <span>View All Projects</span>
             <FiExternalLink className="animate-pulse-slow" />
-          </motion.a>
+          </motion.a> */}
         </motion.div>
       </div>
     </section>

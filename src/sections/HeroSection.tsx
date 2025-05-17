@@ -13,7 +13,7 @@ const HeroSection = () => {
     "Web Developer",
     "UI/UX Designer",
     "Frontend Engineer",
-    "React Specialist"
+    "React Developer"
   ];
 
   // Typing effect
@@ -285,7 +285,7 @@ const HeroSection = () => {
                   animate={{ scale: [1, 1.05, 1] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  A
+                  A.S.
                 </motion.div>
               </motion.div>
             </div>

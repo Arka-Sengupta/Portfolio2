@@ -41,32 +41,32 @@ const AboutSection = () => {
       icon: <FiServer className="text-secondary-500 text-3xl" />,
       title: 'Backend Development',
       description: 'I develop scalable and secure server-side applications and APIs that power modern web applications. My backend solutions focus on performance, security, and maintainability.',
-      technologies: ['Node.js', 'Express', 'Python', 'Django', 'GraphQL', 'REST APIs'],
+      technologies: ['Node.js', 'Express', 'Python', 'flask', 'GraphQL', 'REST APIs'],
       color: 'secondary',
     },
     {
       icon: <FiDatabase className="text-accent-500 text-3xl" />,
       title: 'Database Management',
       description: 'I design efficient database schemas and implement optimized queries for both SQL and NoSQL databases. My approach ensures data integrity, performance, and scalability.',
-      technologies: ['MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Redis', 'Prisma'],
+      technologies: ['MySQL', 'Firebase', 'MongoDB'],
       color: 'accent',
     },
     {
       icon: <FiLayout className="text-primary-500 text-3xl" />,
       title: 'UI/UX Design',
       description: 'I create intuitive and visually appealing user interfaces with a focus on accessibility and user experience. My designs are both beautiful and functional, enhancing user engagement.',
-      technologies: ['Figma', 'Adobe XD', 'Wireframing', 'Prototyping', 'User Testing', 'Responsive Design'],
+      technologies: ['Figma', 'Adobe XD', 'Responsive Design'],
       color: 'primary',
     },
   ];
 
   // Detailed skills with proficiency levels
   const detailedSkills = [
-    { name: 'React/Next.js', level: 95, category: 'Frontend' },
-    { name: 'JavaScript/TypeScript', level: 92, category: 'Frontend' },
-    { name: 'Tailwind CSS', level: 90, category: 'Frontend' },
-    { name: 'Node.js/Express', level: 88, category: 'Backend' },
-    { name: 'Python/Django', level: 85, category: 'Backend' },
+    { name: 'React.js', level: 55, category: 'Frontend' },
+    { name: 'JavaScript/TypeScript', level: 90, category: 'Frontend' },
+    { name: 'Tailwind CSS', level: 20, category: 'Frontend' },
+    { name: 'Node.js', level: 90, category: 'Backend' },
+    { name: 'Python/flask', level: 85, category: 'Backend' },
     { name: 'GraphQL/REST APIs', level: 87, category: 'Backend' },
     { name: 'MongoDB/Firebase', level: 86, category: 'Database' },
     { name: 'PostgreSQL/MySQL', level: 84, category: 'Database' },
@@ -115,12 +115,10 @@ const AboutSection = () => {
               variants={itemVariants}
             >
               <p className="text-lg mb-6 text-light/80 leading-relaxed">
-                I'm Arka, a passionate full-stack developer with over 5 years of experience in creating modern, user-friendly web applications.
-                With expertise in both frontend and backend technologies, I specialize in building responsive, high-performance digital experiences that solve real-world problems.
+                I'm Arka, a passionate full-stack developer in learning. I am a 1st year student in VIT-AP university, in the branch of computer science and Engineering. I have made some projects related to my line of work and would continue.
               </p>
               <p className="text-lg mb-8 text-light/80 leading-relaxed">
-                My journey in web development began during my university years, and I've since worked with startups and established companies to deliver innovative solutions.
-                I believe in writing clean, maintainable code and staying at the forefront of emerging technologies. My approach combines technical excellence with a keen eye for design and user experience.
+                My journey in web development began after my High School, when I got a keen interest in building websites. I started with the basics of HTML, CSS and JavaScript. I dived into other webdev frameworks after coming to college, as I got to know about the competition and modern day requirements in the tech sector. So I developped my skills accordingly.
               </p>
 
               {/* Skill bars */}
@@ -162,7 +160,7 @@ const AboutSection = () => {
                   {/* Replace with your image */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 via-dark-900/50 to-secondary-500/20"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-6xl font-bold gradient-text">Arka</div>
+                    <div className="text-6xl font-bold gradient-text"><img src="\src\assets\images\pic.jpg" alt="profile" title="yup that's me"/></div>
                   </div>
                 </div>
               </div>
