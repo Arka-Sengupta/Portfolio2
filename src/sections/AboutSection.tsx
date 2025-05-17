@@ -160,7 +160,7 @@ const AboutSection = () => {
                   {/* Replace with your image */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 via-dark-900/50 to-secondary-500/20"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-6xl font-bold gradient-text"><img src="https://github.com/Arka-Sengupta/Portfolio2/blob/main/src/assets/images/pic.jpg" alt="profile" title="yup that's me"/></div>
+                    <div className="text-6xl font-bold gradient-text"><img src="https://raw.githubusercontent.com/Arka-Sengupta/Portfolio2/refs/heads/main/src/assets/images/pic.jpg" alt="profile" title="yup that's me"/></div>
                   </div>
                 </div>
               </div>
