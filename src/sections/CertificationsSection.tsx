@@ -1,0 +1,186 @@
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { FiAward, FiExternalLink, FiCalendar } from 'react-icons/fi';
+
+const CertificationsSection = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.6, 0.05, -0.01, 0.9],
+      },
+    },
+  };
+
+  const certifications = [
+    {
+      title: 'AWS Certified Solutions Architect - Associate',
+      issuer: 'Amazon Web Services',
+      date: 'March 2023',
+      credentialId: 'AWS-ASAC-98765',
+      credentialURL: 'https://www.credly.com/badges/aws-certified-solutions-architect-associate',
+      skills: ['Cloud Architecture', 'AWS Services', 'Infrastructure Design', 'Security'],
+    },
+    {
+      title: 'Meta Frontend Developer Professional Certificate',
+      issuer: 'Meta (Facebook)',
+      date: 'November 2022',
+      credentialId: 'META-FE-87654',
+      credentialURL: 'https://www.coursera.org/professional-certificates/meta-front-end-developer',
+      skills: ['React', 'JavaScript', 'Responsive Design', 'Frontend Testing'],
+    },
+    {
+      title: 'TensorFlow Developer Certificate',
+      issuer: 'Google',
+      date: 'August 2022',
+      credentialId: 'TF-DEV-76543',
+      credentialURL: 'https://www.tensorflow.org/certificate',
+      skills: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Computer Vision'],
+    },
+    {
+      title: 'Professional Scrum Master I (PSM I)',
+      issuer: 'Scrum.org',
+      date: 'May 2022',
+      credentialId: 'PSM-65432',
+      credentialURL: 'https://www.scrum.org/professional-scrum-certifications/professional-scrum-master-i-certification',
+      skills: ['Agile Methodologies', 'Scrum Framework', 'Team Leadership', 'Project Management'],
+    },
+    {
+      title: 'MongoDB Certified Developer Associate',
+      issuer: 'MongoDB University',
+      date: 'February 2022',
+      credentialId: 'MDB-54321',
+      credentialURL: 'https://university.mongodb.com/certification',
+      skills: ['MongoDB', 'NoSQL Databases', 'Data Modeling', 'Query Optimization'],
+    },
+    {
+      title: 'Full Stack Web Development with React Specialization',
+      issuer: 'Coursera (Hong Kong University of Science and Technology)',
+      date: 'October 2021',
+      credentialId: 'FSWD-43210',
+      credentialURL: 'https://www.coursera.org/specializations/full-stack-react',
+      skills: ['React', 'Node.js', 'Express', 'MongoDB', 'Full Stack Development'],
+    },
+  ];
+
+  return (
+    <section id="certifications" className="section-padding bg-gradient-to-b from-dark-800 to-dark-900 relative">
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl"></div>
+        {/* Grid pattern */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMxZTI5M2IiIGQ9Ik0wIDBoNjB2NjBIMHoiLz48cGF0aCBkPSJNMzAgMzBoMzB2MzBIMzB6TTAgMGgzMHYzMEgweiIgZmlsbD0iIzBmMTcyYSIvPjwvZz48L3N2Zz4=')] opacity-5"></div>
+      </div>
+
+      <div className="container mx-auto relative z-10">
+        <motion.div
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          className="text-center mb-16"
+        >
+          <motion.h2
+            variants={itemVariants}
+            className="section-subtitle"
+          >
+            Professional Development
+          </motion.h2>
+          <motion.h3
+            variants={itemVariants}
+            className="section-title"
+          >
+            Certifications
+          </motion.h3>
+          <motion.div
+            variants={itemVariants}
+            className="divider"
+          ></motion.div>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="glass-card p-6 rounded-xl transition-all duration-300 group"
+              whileHover={{
+                y: -8,
+                boxShadow: '0 15px 30px -10px rgba(14, 165, 233, 0.2)',
+                borderColor: 'rgba(14, 165, 233, 0.3)'
+              }}
+            >
+              <div className="flex items-start mb-5">
+                <div className="p-3 bg-primary-500/10 rounded-lg mr-4 border border-primary-500/20 group-hover:bg-primary-500/20 transition-colors duration-300">
+                  <FiAward className="text-primary-500 text-xl" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-light group-hover:text-primary-500 transition-colors duration-300">
+                    {cert.title}
+                  </h4>
+                  <p className="text-light/70 mt-1">{cert.issuer}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center mb-4 text-light/60 bg-dark-800/30 px-3 py-1.5 rounded-md inline-block">
+                <FiCalendar className="mr-2 text-secondary-500" />
+                <span className="text-sm">{cert.date}</span>
+              </div>
+
+              <div className="mb-5">
+                <p className="text-sm text-light/70">
+                  <span className="font-medium text-primary-500">Credential ID:</span> {cert.credentialId}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-5">
+                {cert.skills.map((skill, skillIndex) => (
+                  <span
+                    key={skillIndex}
+                    className="skill-badge"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              <motion.a
+                href={cert.credentialURL}
+                className="flex items-center text-primary-500 hover:text-secondary-500 transition-colors duration-300 text-sm font-medium mt-auto"
+                whileHover={{ x: 5 }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>View Credential</span>
+                <FiExternalLink className="ml-1.5" />
+              </motion.a>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default CertificationsSection;
