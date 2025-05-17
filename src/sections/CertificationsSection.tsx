@@ -46,14 +46,6 @@ const CertificationsSection = () => {
       skills: ['JavaScript'],
     },
     {
-      title: 'TensorFlow Developer Certificate',
-      issuer: 'Google',
-      date: 'August 2022',
-      credentialId: 'TF-DEV-76543',
-      credentialURL: 'https://www.tensorflow.org/certificate',
-      skills: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Computer Vision'],
-    },
-    {
       title: 'MATLAB Onramp',
       issuer: 'MathWorks',
       date: 'October 2024',

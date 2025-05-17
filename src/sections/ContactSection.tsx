@@ -259,7 +259,7 @@ const ContactSection = () => {
                   required
                   rows={5}
                   className={inputClasses}
-                  placeholder="write your message here....."
+                  placeholder="Not working yet but you can contact via the email or phone number for now....."
                 ></textarea>
               </div>
 

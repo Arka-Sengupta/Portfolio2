@@ -34,6 +34,7 @@ const ProjectsSection = () => {
     { id: 'web', name: 'Web Development' },
     { id: 'mobile', name: 'Mobile Apps' },
     { id: 'ai', name: 'AI/ML' },
+    { id: 'desk', name: 'Desktop App' },
   ];
 
   const projects = [
@@ -49,47 +50,29 @@ const ProjectsSection = () => {
     {
       title: 'Scoder',
       description: 'AI-guided collaborative coding platform',
-      image: '/project2.jpg',
-      technologies: ['Python', 'TensorFlow', 'React', 'FastAPI', 'WebGL', 'AWS'],
+      image: '/src/assets/images/remove.png',
+      technologies: ['Python', 'TensorFlow', 'React', 'FastAPI', 'WebGL','TypeScript'],
       category: 'ai',
-      github: 'https://github.com/arkasengupta/ai-vision-studio',
-      liveDemo: 'https://ai-vision-studio.com',
+      // github: 'https://github.com/arkasengupta/ai-vision-studio',
+      // liveDemo: 'https://ai-vision-studio.com',
     },
     {
-      title: 'FitTrack Pro',
-      description: 'A comprehensive fitness tracking mobile application with workout planning, nutrition tracking, progress analytics, and AI-powered personalized recommendations.',
-      image: '/project3.jpg',
-      technologies: ['React Native', 'Firebase', 'Redux', 'Node.js', 'GraphQL', 'TensorFlow Lite'],
-      category: 'mobile',
-      github: 'https://github.com/arkasengupta/fittrack-pro',
-      liveDemo: 'https://play.google.com/store/apps/fittrack-pro',
+      title: 'Pixel Pulse',
+      description: 'PixelPulse is a dual-application Java tool that lets users encode images into Robot 36 SSTV audio signals and decode those audio files back into images, using custom-built FFT and signal processing algorithms with a Swing-based GUI.',
+      image: '/src/assets/images/PixelPulse_logo.png',
+      technologies: ['java','java Swing'],
+      category: 'desk',
+      github: 'https://github.com/Arka-Sengupta/PixelPulse',
+      liveDemo: 'https://github.com/Arka-Sengupta/PixelPulse',
     },
     {
-      title: 'ConnectHub',
-      description: 'A real-time communication platform featuring instant messaging, video calls, file sharing, end-to-end encryption, and collaborative workspaces for teams.',
-      image: '/project4.jpg',
-      technologies: ['Socket.io', 'React', 'Express', 'MongoDB', 'WebRTC', 'Redis'],
+      title: 'Old Portfolio',
+      description: 'A basic portfolio I made initially',
+      image: '/src/assets/images/porto.png',
+      technologies: ['HTML','CSS','JavaScript','Bootstrap'],
       category: 'web',
-      github: 'https://github.com/arkasengupta/connecthub',
-      liveDemo: 'https://connecthub.io',
-    },
-    {
-      title: 'SentiScan Analytics',
-      description: 'An advanced sentiment analysis tool that processes text data from multiple sources to provide detailed emotional analysis, trend identification, and actionable insights.',
-      image: '/project5.jpg',
-      technologies: ['Python', 'NLTK', 'Scikit-learn', 'FastAPI', 'React', 'D3.js'],
-      category: 'ai',
-      github: 'https://github.com/arkasengupta/sentiscan',
-      liveDemo: 'https://sentiscan.ai',
-    },
-    {
-      title: 'TaskFlow Mobile',
-      description: 'A productivity-focused task management app with smart scheduling, priority-based organization, recurring tasks, team collaboration, and detailed analytics.',
-      image: '/project6.jpg',
-      technologies: ['Flutter', 'Firebase', 'Dart', 'Provider', 'Cloud Functions', 'SQLite'],
-      category: 'mobile',
-      github: 'https://github.com/arkasengupta/taskflow',
-      liveDemo: 'https://apps.apple.com/app/taskflow',
+      github: 'https://github.com/Arka-Sengupta/portfolio',
+      liveDemo: 'https://arka-sengupta.github.io/portfolio/index.html',
     },
   ];
 
@@ -183,7 +166,6 @@ const ProjectsSection = () => {
                     className="absolute inset-0 bg-dark-900/50 bg-center bg-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
                     style={{ backgroundImage: `url(${project.image})` }}
                   ></div>
-
                   {/* Category badge */}
                   <div className="absolute top-4 left-4 z-20">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -191,13 +173,19 @@ const ProjectsSection = () => {
                         ? 'bg-primary-500/20 text-primary-300 border border-primary-500/30'
                         : project.category === 'mobile'
                         ? 'bg-secondary-500/20 text-secondary-300 border border-secondary-500/30'
-                        : 'bg-accent-500/20 text-accent-300 border border-accent-500/30'
+                        : project.category === 'ai'
+                        ? 'bg-accent-500/20 text-accent-300 border border-accent-500/30'
+                        : 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30'
                     }`}>
-                      {project.category === 'web' ? 'Web Development' :
-                       project.category === 'mobile' ? 'Mobile App' : 'AI/ML'}
+                      {project.category === 'web'
+                        ? 'Web Development'
+                        : project.category === 'mobile'
+                        ? 'Mobile App'
+                        : project.category === 'ai'
+                        ? 'AI/ML'
+                        : 'Desktop App'}
                     </span>
                   </div>
-
                   {/* Action buttons */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 bg-dark-900/40 backdrop-blur-sm">
                     <div className="flex space-x-4">
