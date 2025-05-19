@@ -97,7 +97,7 @@ const HeroSection = () => {
   };
 
   const downloadResume = () => {
-    const resumeUrl = '/public/resume.pdf';
+    const resumeUrl = '/resume.pdf';
     window.open(resumeUrl, '_blank');
   };
 
