@@ -41,21 +41,36 @@ const ContactSection = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      const response = await fetch('https://formsubmit.co/arka.sengupta.06@gmail.com', {
+        method: 'POST',
+        body: formData,
+      });
 
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1500);
+      if (response.ok) {
+        setSubmitSuccess(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setSubmitSuccess(false);
+        }, 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -193,6 +208,8 @@ const ContactSection = () => {
           >
             <motion.form
               variants={itemVariants}
+              action="https://formsubmit.co/arka.sengupta.06@gmail.com"
+              method="POST"
               onSubmit={handleSubmit}
               className="glass-card p-8 rounded-xl"
             >
@@ -259,7 +276,7 @@ const ContactSection = () => {
                   required
                   rows={5}
                   className={inputClasses}
-                  placeholder="Not working yet but you can contact via the email or phone number for now....."
+                  placeholder="Write your message here..."
                 ></textarea>
               </div>
 
