@@ -46,7 +46,7 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://portfolio-contact-server.onrender.com/contact', {
+      const response = await fetch('https://formspree.io/f/mnndydrd', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -54,9 +54,7 @@ const ContactSection = () => {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-
-      if (data.success) {
+      if (response.ok) {
         setSubmitSuccess(true);
         setFormData({ name: '', email: '', subject: '', message: '' });
         
@@ -65,7 +63,7 @@ const ContactSection = () => {
           setSubmitSuccess(false);
         }, 5000);
       } else {
-        throw new Error(data.message || 'Form submission failed');
+        throw new Error('Form submission failed');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -210,7 +208,7 @@ const ContactSection = () => {
           >
             <motion.form
               variants={itemVariants}
-              action="https://arkasngportfolio.netlify.app/contact"
+              action="https://formspree.io/f/mnndydrd"
               method="POST"
               onSubmit={handleSubmit}
               className="glass-card p-8 rounded-xl"
