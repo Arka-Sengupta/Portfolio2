@@ -115,7 +115,7 @@ const AboutSection = () => {
               variants={itemVariants}
             >
               <p className="text-lg mb-6 text-light/80 leading-relaxed">
-                I'm Arka, a passionate full-stack developer in learning. I am a 1st year student in VIT-AP university, in the branch of computer science and Engineering. I have made some projects related to my line of work and would continue.
+                I'm Arka, a passionate full-stack developer in learning. I am a 2nd year student in VIT-AP university, in the branch of computer science and Engineering. I have made some projects related to my line of work and would continue.
               </p>
               <p className="text-lg mb-8 text-light/80 leading-relaxed">
                 My journey in web development began after my High School, when I got a keen interest in building websites. I started with the basics of HTML, CSS and JavaScript. I dived into other webdev frameworks after coming to college, as I got to know about the competition and modern day requirements in the tech sector. So I developped my skills accordingly.
