@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiArrowUp } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiArrowUp } from 'react-icons/fi';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -50,16 +51,16 @@ const Footer = () => {
             >
               <FiLinkedin />
             </motion.a>
-            {/* <motion.a
-              href="https://twitter.com/"
+            { <motion.a
+              href="https://x.com/ArkaSen43150091"
               className="p-3 bg-primary/10 text-primary rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.9 }}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FiTwitter />
-            </motion.a> */}
+              <FaXTwitter />
+            </motion.a> }
           </div>
         </div>
         
