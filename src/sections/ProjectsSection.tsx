@@ -45,7 +45,8 @@ const ProjectsSection = () => {
       technologies: ['python','HTML','CSS','JavaScript'],
       category: 'web',
       github: 'https://github.com/Arka-Sengupta/StockWise',
-      // liveDemo: 'https://nexcommerce-demo.vercel.app',
+      liveDemo: 'https://stockwise-24nq.onrender.com/',
+      
     },
     {
       title: 'Scoder',
