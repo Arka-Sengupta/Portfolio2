@@ -17,6 +17,7 @@ import ContactSection from './sections/ContactSection';
 
 // Pages
 import NotFound from './pages/NotFound.jsx';
+import Game from './pages/Game.jsx';
 
 function App() {
   useEffect(() => {
@@ -47,6 +48,7 @@ function App() {
                 <ContactSection />
               </>
             } />
+            <Route path="/game" element={<Game />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

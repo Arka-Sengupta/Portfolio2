@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiDownload, FiArrowDown, FiCode, FiLayout, FiServer, FiDatabase } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -8,6 +9,7 @@ const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(150);
+  const navigate = useNavigate();
 
   const textArray = [
     "Web Developer",
@@ -284,6 +286,12 @@ const HeroSection = () => {
                   className="text-5xl font-bold gradient-text"
                   animate={{ scale: [1, 1.05, 1] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  style={{ cursor: '' }}
+                  onClick={() => {
+                    if (window.confirm('Wanna play a game?')) {
+                      navigate('/game');
+                    }
+                  }}
                 >
                   A.S.
                 </motion.div>
