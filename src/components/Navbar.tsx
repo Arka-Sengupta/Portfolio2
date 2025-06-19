@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,12 +25,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Education', href: '#education' },
-    { name: 'Certifications', href: '#certifications' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', to: '/' },
+    { name: 'About', to: '/#about' },
+    { name: 'Education', to: '/#education' },
+    { name: 'Certifications', to: '/#certifications' },
+    { name: 'Projects', to: '/#projects' },
+    { name: 'Contact', to: '/#contact' },
   ];
 
   const navbarVariants = {
@@ -71,6 +73,20 @@ const Navbar = () => {
     open: { opacity: 1, x: 0 },
   };
 
+  const handleSectionLink = (to: string) => {
+    if (location.pathname !== '/') {
+      window.location.href = to;
+    } else {
+      const id = to.split('#')[1];
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.hash = to;
+      }
+    }
+  };
+
   return (
     <motion.nav
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -81,28 +97,37 @@ const Navbar = () => {
       variants={navbarVariants}
     >
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-        <motion.a
-          href="#home"
+        <Link
+          to="/"
           className="text-2xl font-bold gradient-text"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          style={{ textDecoration: 'none' }}
         >
           Arka Sengupta
-        </motion.a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
-            <motion.a
-              key={link.name}
-              href={link.href}
-              className="text-light hover:text-primary transition-colors duration-300"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {link.name}
-            </motion.a>
-          ))}
+          {navLinks.map((link) =>
+            link.to === '/' ? (
+              <Link
+                key={link.name}
+                to={link.to}
+                className="text-light hover:text-primary transition-colors duration-300"
+                style={{ textDecoration: 'none' }}
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <button
+                key={link.name}
+                onClick={() => handleSectionLink(link.to)}
+                className="text-light hover:text-primary transition-colors duration-300 bg-transparent border-none outline-none cursor-pointer"
+                style={{ textDecoration: 'none' }}
+              >
+                {link.name}
+              </button>
+            )
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -127,19 +152,28 @@ const Navbar = () => {
             variants={mobileMenuVariants}
           >
             <div className="flex flex-col items-center space-y-8">
-              {navLinks.map((link) => (
-                <motion.a
-                  key={link.name}
-                  href={link.href}
-                  className="text-2xl text-light hover:text-primary transition-colors duration-300"
-                  onClick={() => setIsOpen(false)}
-                  variants={linkVariants}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {link.name}
-                </motion.a>
-              ))}
+              {navLinks.map((link) =>
+                link.to === '/' ? (
+                  <Link
+                    key={link.name}
+                    to={link.to}
+                    className="text-2xl text-light hover:text-primary transition-colors duration-300"
+                    style={{ textDecoration: 'none' }}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <button
+                    key={link.name}
+                    onClick={() => { handleSectionLink(link.to); setIsOpen(false); }}
+                    className="text-2xl text-light hover:text-primary transition-colors duration-300 bg-transparent border-none outline-none cursor-pointer"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    {link.name}
+                  </button>
+                )
+              )}
             </div>
           </motion.div>
         )}
