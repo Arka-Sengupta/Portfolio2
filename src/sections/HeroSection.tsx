@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiDownload, FiArrowDown, FiCode, FiLayout, FiServer, FiDatabase } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -287,8 +288,19 @@ const HeroSection = () => {
                   animate={{ scale: [1, 1.05, 1] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                   style={{ cursor: '' }}
-                  onClick={() => {
-                    if (window.confirm('Wanna play a game?')) {
+                  onClick={async () => {
+                    const result = await Swal.fire({
+                      title: 'Wanna play a game?',
+                      icon: 'question',
+                      showCancelButton: true,
+                      confirmButtonText: 'Yes!',
+                      cancelButtonText: 'Nope',
+                      background: '#18181b',
+                      color: '#fff',
+                      confirmButtonColor: '#6366f1',
+                      cancelButtonColor: '#a21caf',
+                    });
+                    if (result.isConfirmed) {
                       navigate('/game');
                     }
                   }}
