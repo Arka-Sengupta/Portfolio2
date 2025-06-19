@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 // Components
@@ -14,6 +15,9 @@ import CertificationsSection from './sections/CertificationsSection';
 import ProjectsSection from './sections/ProjectsSection';
 import ContactSection from './sections/ContactSection';
 
+// Pages
+import NotFound from './pages/NotFound';
+
 function App() {
   useEffect(() => {
     // Hide default cursor when custom cursor is active
@@ -26,21 +30,30 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <CustomCursor />
-      <Navbar />
+    <BrowserRouter>
+      <div className="App">
+        <CustomCursor />
+        <Navbar />
 
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <EducationSection />
-        <CertificationsSection />
-        <ProjectsSection />
-        <ContactSection />
-      </main>
+        <main>
+          <Routes>
+            <Route path="/" element={
+              <>
+                <HeroSection />
+                <AboutSection />
+                <EducationSection />
+                <CertificationsSection />
+                <ProjectsSection />
+                <ContactSection />
+              </>
+            } />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
