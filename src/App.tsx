@@ -16,7 +16,7 @@ import ProjectsSection from './sections/ProjectsSection';
 import ContactSection from './sections/ContactSection';
 
 // Pages
-import NotFound from './pages/NotFound';
+import NotFound from './pages/NotFound.jsx';
 
 function App() {
   useEffect(() => {

@@ -14,8 +14,8 @@ const NotFound = () => (
   }}>
     <h1 style={{ fontSize: "4rem", marginBottom: "1rem" }}>404</h1>
     <p style={{ fontSize: "1.7rem", marginBottom: "2rem", fontWeight: 500 }}>
-      Oops! You’ve wandered off the map.<br />
-      This page is as lost as your last left sock 🧦
+      Oops! You're like the 5th member of the array whose size is '5'<br />
+      ie. you don't belong here!
     </p>
     <Link to="/" style={{
       display: "inline-block",
