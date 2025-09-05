@@ -49,15 +49,6 @@ const ProjectsSection = () => {
       
     },
     {
-      title: 'Scoder',
-      description: 'AI-guided collaborative coding platform',
-      image: 'https://raw.githubusercontent.com/Arka-Sengupta/Portfolio2/refs/heads/main/src/assets/images/remove.png',
-      technologies: ['Python', 'TensorFlow', 'React', 'FastAPI', 'WebGL','TypeScript'],
-      category: 'ai',
-      // github: 'https://github.com/arkasengupta/ai-vision-studio',
-      // liveDemo: 'https://ai-vision-studio.com',
-    },
-    {
       title: 'Pixel Pulse',
       description: 'PixelPulse is a dual-application Java tool that lets users encode images into Robot 36 SSTV audio signals and decode those audio files back into images, using custom-built FFT and signal processing algorithms with a Swing-based GUI.',
       image: 'https://raw.githubusercontent.com/Arka-Sengupta/Portfolio2/refs/heads/main/src/assets/images/PixelPulse_logo.png',
@@ -71,6 +62,15 @@ const ProjectsSection = () => {
       description: 'A basic portfolio I made initially',
       image: 'https://raw.githubusercontent.com/Arka-Sengupta/Portfolio2/refs/heads/main/src/assets/images/porto.png',
       technologies: ['HTML','CSS','JavaScript','Bootstrap'],
+      category: 'web',
+      github: 'https://github.com/Arka-Sengupta/portfolio',
+      liveDemo: 'https://arka-sengupta.github.io/portfolio/index.html',
+    },
+    {
+      title: 'Sai Charith\'s portfolio',
+      description: 'A react based site for a friend of mine to showcase his skills on photography and videography',
+      image: '/cherry.png',
+      technologies: ['react','framer','GSAP'],
       category: 'web',
       github: 'https://github.com/Arka-Sengupta/portfolio',
       liveDemo: 'https://arka-sengupta.github.io/portfolio/index.html',
