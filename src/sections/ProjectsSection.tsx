@@ -72,8 +72,8 @@ const ProjectsSection = () => {
       image: '/cherry.png',
       technologies: ['react','framer','GSAP'],
       category: 'web',
-      github: 'https://github.com/Arka-Sengupta/portfolio',
-      liveDemo: 'https://arka-sengupta.github.io/portfolio/index.html',
+      github: 'https://github.com/Arka-Sengupta/cherry_page',
+      liveDemo: 'https://saicharith.netlify.app/',
     },
   ];
 
